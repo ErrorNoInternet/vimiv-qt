@@ -47,3 +47,4 @@ Currently the following formats are supported:
 
 * cr2 (requires `qt raw <https://gitlab.com/mardy/qtraw>`_)
 * avif (requires `qt-avif-image-plugin <https://github.com/novomesk/qt-avif-image-plugin>`_)
+* heif (requires `qt-heif-image-plugin <https://github.com/jakar/qt-heif-image-plugin>`_)
