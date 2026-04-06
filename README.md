@@ -1,10 +1,10 @@
 <img src="https://karlch.github.io/vimiv-qt/_images/vimiv_banner_800.png" alt="vimiv banner" width="400"/>
 
-[![Build Status](https://github.com/karlch/vimiv-qt/workflows/CI/badge.svg)](https://github.com/karlch/vimiv-qt/actions)
-[![Codecov](https://codecov.io/github/karlch/vimiv-qt/coverage.svg?branch=master)](https://codecov.io/github/karlch/vimiv-qt?branch=master)
+[![Build Status](https://github.com/ErrorNoInternet/vimiv-qt/workflows/CI/badge.svg)](https://github.com/ErrorNoInternet/vimiv-qt/actions)
+[![Codecov](https://codecov.io/github/ErrorNoInternet/vimiv-qt/coverage.svg)](https://codecov.io/github/karlch/vimiv-qt)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
-[website](https://karlch.github.io/vimiv-qt/) |
+[original website](https://karlch.github.io/vimiv-qt/) |
 [docs](https://karlch.github.io/vimiv-qt/documentation/index.html) |
 [install](https://karlch.github.io/vimiv-qt/documentation/install.html) |
 [screenshots](https://karlch.github.io/vimiv-qt/screenshots.html) |
@@ -14,12 +14,8 @@
 <img src="https://i.postimg.cc/VkcPgcbR/vimiv.gif" alt="vimiv screencast" width="440"/>
 
 ---
-> :information_source: This Qt port is the future of vimiv. New features will
-> only be implemented here and there are already many improvements compared to the
-> [deprecated gtk version](https://github.com/karlch/vimiv). The old version is only
-> recommended if you require a more stable software. In case there is anything you miss
-> here, please [open an issue](https://github.com/karlch/vimiv-qt/issues). Check the
-> [roadmap](https://karlch.github.io/vimiv-qt/roadmap.html) for more details.
+> :information_source: This is an updated fork of [karlch's vimiv-qt](https://github.com/karlch/vimiv-qt) that
+> includes cherry-picked PRs custom features/fixes. Use at your own discretion.
 ---
 
 Vimiv is an image viewer with vim-like keybindings. It is written in python3
@@ -45,6 +41,7 @@ To learn how to get vimiv running on various platforms, please check out the
 
 Much more details on vimiv are available on the
 [website](https://karlch.github.io/vimiv-qt/). Here are some hints to get you started:
+
 * [The installation guide](https://karlch.github.io/vimiv-qt/documentation/install.html)
    includes instructions on how to get vimiv running on various platforms.
 * [Getting started](https://karlch.github.io/vimiv-qt/documentation/getting\_started.html)
@@ -77,10 +74,8 @@ There are many ways to contribute, including:
 * [extending the documentation](https://karlch.github.io/vimiv-qt/documentation/contributing.html#writing-documentation)
 * spreading the word in an article, blog, reddit post, ...
 
-Need help? Feel free to
-[contact me directly](mailto:karlch@protonmail.com)
-or, even better,
-open an [issue on github](https://github.com/karlch/vimiv-qt/issues/).
+Need help? Feel free to open an
+[issue on GitHub](https://github.com/ErrorNoInternet/vimiv-qt/issues/).
 
 ### License
 
