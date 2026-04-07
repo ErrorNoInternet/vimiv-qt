@@ -1,7 +1,7 @@
 <img src="https://karlch.github.io/vimiv-qt/_images/vimiv_banner_800.png" alt="vimiv banner" width="400"/>
 
 [![Build Status](https://github.com/ErrorNoInternet/vimiv-qt/workflows/CI/badge.svg)](https://github.com/ErrorNoInternet/vimiv-qt/actions)
-[![Codecov](https://codecov.io/github/ErrorNoInternet/vimiv-qt/coverage.svg)](https://codecov.io/github/karlch/vimiv-qt)
+[![Codecov](https://codecov.io/github/ErrorNoInternet/vimiv-qt/coverage.svg)](https://codecov.io/github/ErrorNoInternet/vimiv-qt)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 [original website](https://karlch.github.io/vimiv-qt/) |
