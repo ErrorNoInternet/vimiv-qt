@@ -11,8 +11,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - python: "3.8"
-            toxenv: pyqt515-piexif-pyexiv2-cov
           - python: "3.9"
             toxenv: pyqt515
           - python: "3.10"
@@ -29,6 +27,8 @@ jobs:
             toxenv: pyqt64
           - python: "3.11"
             toxenv: pyqt65
+          - python: "3.12"
+            toxenv: pyqt515-piexif-pyexiv2-cov
           - python: "3.12"
             toxenv: pyqt66
           - python: "3.12"
