@@ -45,7 +45,7 @@ def _test_cr2(h: bytes, _f: BinaryIO) -> bool:
 
     Support: QtRaw https://gitlab.com/mardy/qtraw
     """
-    return h[:10] == b"\x49\x49\x2A\x00\x10\x00\x00\x00\x43\x52"
+    return h[:10] == b"\x49\x49\x2a\x00\x10\x00\x00\x00\x43\x52"
 
 
 def _test_avif(h: bytes, _f: BinaryIO) -> bool:

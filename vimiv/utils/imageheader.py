@@ -166,7 +166,7 @@ def _test_jpg(h: bytes, _f: BinaryIO) -> bool:
 
     Support: native
     """
-    return h[:3] == b"\xFF\xD8\xFF"
+    return h[:3] == b"\xff\xd8\xff"
 
 
 def _test_png(h: bytes, _f: BinaryIO) -> bool:
@@ -180,7 +180,7 @@ def _test_png(h: bytes, _f: BinaryIO) -> bool:
 
     Support: native
     """
-    return h[:8] == b"\x89\x50\x4E\x47\x0D\x0A\x1A\x0A"
+    return h[:8] == b"\x89\x50\x4e\x47\x0d\x0a\x1a\x0a"
 
 
 def _test_gif(h: bytes, _f: BinaryIO) -> bool:
@@ -214,11 +214,11 @@ def _test_svg(h: bytes, f: BinaryIO) -> bool:
 
     Native QT support.
     """
-    if h[:4] == b"\x3C\x73\x76\x67":
+    if h[:4] == b"\x3c\x73\x76\x67":
         return True
 
     # Check if start with <?
-    if h[:2] != b"\x3C\x3F":
+    if h[:2] != b"\x3c\x3f":
         return False
 
     # If stripped svg
@@ -293,7 +293,7 @@ def _test_bmp(h: bytes, _f: BinaryIO) -> bool:
 
     Support: native
     """
-    return h[0:2] == b"\x42\x4D"
+    return h[0:2] == b"\x42\x4d"
 
 
 def _test_xbm(h: bytes, f: BinaryIO) -> bool:
@@ -332,7 +332,7 @@ def _test_xpm(h: bytes, _f: BinaryIO) -> bool:
 
     Support: native
     """
-    return h[:9] == b"\x2F\x2A\x20\x58\x50\x4D\x20\x2A\x2F"
+    return h[:9] == b"\x2f\x2a\x20\x58\x50\x4d\x20\x2a\x2f"
 
 
 def _test_webp(h: bytes, _f: BinaryIO) -> bool:
@@ -366,7 +366,7 @@ def _test_tiff(h: bytes, _f: BinaryIO) -> bool:
 
     Support: extended
     """
-    return h[:4] in [b"\x49\x49\x2A\x00", b"\x4D\x4D\x00\x2A"]
+    return h[:4] in [b"\x49\x49\x2a\x00", b"\x4d\x4d\x00\x2a"]
 
 
 def _test_ico(h: bytes, _f: BinaryIO) -> bool:
@@ -412,7 +412,7 @@ def _test_jp2(h: bytes, _f: BinaryIO) -> bool:
 
     Support: extended
     """
-    return h[:12] == b"\x00\x00\x00\x0C\x6A\x50\x20\x20\x0D\x0A\x87\x0A"
+    return h[:12] == b"\x00\x00\x00\x0c\x6a\x50\x20\x20\x0d\x0a\x87\x0a"
 
 
 def _test_cur(h: bytes, _f: BinaryIO) -> bool:
@@ -447,7 +447,7 @@ def _test_mng(h: bytes, _f: BinaryIO) -> bool:
 
     Support: extended
     """
-    return h[:8] == b"\x8A\x4D\x4E\x47\x0D\x0A\x1A\x0A"
+    return h[:8] == b"\x8a\x4d\x4e\x47\x0d\x0a\x1a\x0a"
 
 
 def _test_tga(_h: bytes, f: BinaryIO) -> bool:
@@ -470,7 +470,7 @@ def _test_tga(_h: bytes, f: BinaryIO) -> bool:
     try:
         f.seek(-18, 2)
         h = f.read(16)
-        return h == b"\x54\x52\x55\x45\x56\x49\x53\x49\x4F\x4E\x2D\x58\x46\x49\x4C\x45"
+        return h == b"\x54\x52\x55\x45\x56\x49\x53\x49\x4f\x4e\x2d\x58\x46\x49\x4c\x45"
     except OSError:
         return False
 
