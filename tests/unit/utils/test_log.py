@@ -72,8 +72,9 @@ def test_setup_logging_debug_loggers(capsys, creation_time):
     name = "my.module.logger"
     if creation_time == "before":
         module_logger = log.module_logger(name)
-    log.setup_logging(logging.WARNING, name)
-    if creation_time == "after":
+        log.setup_logging(logging.WARNING, name)
+    else:
+        log.setup_logging(logging.WARNING, name)
         module_logger = log.module_logger(name)
 
     message = "Show this debug statement"
