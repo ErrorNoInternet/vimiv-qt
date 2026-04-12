@@ -19,7 +19,7 @@ elif qt.USE_PYSIDE6:
     QT_VERSION_STR = qVersion()
 
 if qt.USE_PYQT:  # Signal aliases
-    # pylint: disable=used-before-assignment
+    # pylint: disable=invalid-name,used-before-assignment
     BoundSignal = pyqtBoundSignal
     Signal = pyqtSignal
     Slot = pyqtSlot
