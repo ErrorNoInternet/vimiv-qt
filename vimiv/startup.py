@@ -149,7 +149,7 @@ def init_ui(args: argparse.Namespace) -> None:
     if args.fullscreen:
         mw.fullscreen()
     # Center on screen and apply size
-    screen_geometry = QApplication.primaryScreen().geometry()  # type: ignore[union-attr]
+    screen_geometry = QApplication.primaryScreen().geometry()  # type: ignore[union-attr,unused-ignore]
     geometry = (
         args.geometry
         if args.geometry

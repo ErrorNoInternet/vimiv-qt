@@ -39,4 +39,4 @@ class VersionPopUp(PopUp):
     @staticmethod
     def copy_to_clipboard() -> None:
         """Copy version information to clipboard."""
-        QGuiApplication.clipboard().setText(vimiv.version.info())  # type: ignore[union-attr]
+        QGuiApplication.clipboard().setText(vimiv.version.info())  # type: ignore[union-attr,unused-ignore]

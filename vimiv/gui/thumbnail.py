@@ -26,7 +26,7 @@ _logger = log.module_logger(__name__)
 # pylint: disable=too-many-public-methods
 
 
-class ThumbnailView(  # type: ignore[misc]
+class ThumbnailView(  # type: ignore[misc,unused-ignore]
     eventhandler.EventHandlerMixin,
     widgets.GetNumVisibleMixin,
     widgets.ScrollToCenterMixin,

@@ -81,7 +81,7 @@ def copy_name(abspath: bool = False, primary: bool = False) -> None:
     mode = QClipboard.Mode.Selection if primary else QClipboard.Mode.Clipboard
     path = api.current_path()
     name = path if abspath else os.path.basename(path)
-    clipboard.setText(name, mode=mode)  # type: ignore[union-attr]
+    clipboard.setText(name, mode=mode)  # type: ignore[union-attr,unused-ignore]
 
 
 @api.keybindings.register("yi", "copy-image")
@@ -138,7 +138,7 @@ def copy_image(
         _logger.debug(f"Copy image with height {height}")
         pixmap = pixmap.scaledToHeight(height)
 
-    clipboard.setPixmap(pixmap, mode=mode)  # type: ignore[union-attr]
+    clipboard.setPixmap(pixmap, mode=mode)  # type: ignore[union-attr,unused-ignore]
 
 
 @api.commands.register()
@@ -152,7 +152,7 @@ def paste_name(primary: bool = True) -> None:
     """
     clipboard = QGuiApplication.clipboard()
     mode = QClipboard.Mode.Selection if primary else QClipboard.Mode.Clipboard
-    api.open_paths([clipboard.text(mode=mode)])  # type: ignore[union-attr]
+    api.open_paths([clipboard.text(mode=mode)])  # type: ignore[union-attr,unused-ignore]
 
 
 @api.commands.register(edit=True)

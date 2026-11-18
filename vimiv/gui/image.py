@@ -35,7 +35,7 @@ INF = float("inf")
 _logger = log.module_logger(__name__)
 
 
-class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: ignore[misc]
+class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: ignore[misc,unused-ignore]
     # pylint: disable=too-many-public-methods
     # TODO consider refactoring
     """QGraphicsView to display Image or Animation.
@@ -139,12 +139,12 @@ class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: i
         self, item: Union[QGraphicsItem, QLabel], rect: QRectF, keep_zoom: bool
     ) -> None:
         """Update the scene with the newly loaded item."""
-        self.scene().clear()  # type: ignore[union-attr]
+        self.scene().clear()  # type: ignore[union-attr,unused-ignore]
         if isinstance(item, QGraphicsItem):
-            self.scene().addItem(item)  # type: ignore[union-attr]
+            self.scene().addItem(item)  # type: ignore[union-attr,unused-ignore]
         else:
-            self.scene().addWidget(item)  # type: ignore[union-attr]
-        self.scene().setSceneRect(rect)  # type: ignore[union-attr]
+            self.scene().addWidget(item)  # type: ignore[union-attr,unused-ignore]
+        self.scene().setSceneRect(rect)  # type: ignore[union-attr,unused-ignore]
         self.scale(self._scale if keep_zoom else ImageScale.Overzoom)  # type: ignore
         self._update_focalpoint()
 
@@ -152,7 +152,7 @@ class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: i
         self.centerOn(self.focalpoint)
 
     def _on_images_cleared(self) -> None:
-        self.scene().clear()  # type: ignore[union-attr]
+        self.scene().clear()  # type: ignore[union-attr,unused-ignore]
 
     @api.keybindings.register("k", "scroll up", mode=api.modes.IMAGE)
     @api.keybindings.register("j", "scroll down", mode=api.modes.IMAGE)
@@ -172,17 +172,17 @@ class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: i
         if direction in (direction.Left, direction.Right):
             bar = self.horizontalScrollBar()
             step = int(
-                self.scene().sceneRect().width() * 0.05 * count  # type: ignore[union-attr]
+                self.scene().sceneRect().width() * 0.05 * count  # type: ignore[union-attr,unused-ignore]
             )
         else:
             bar = self.verticalScrollBar()
             step = int(
-                self.scene().sceneRect().height() * 0.05 * count  # type: ignore[union-attr]
+                self.scene().sceneRect().height() * 0.05 * count  # type: ignore[union-attr,unused-ignore]
             )
         if direction in (direction.Right, direction.Down):
-            bar.setValue(bar.value() + step)  # type: ignore[union-attr]
+            bar.setValue(bar.value() + step)  # type: ignore[union-attr,unused-ignore]
         else:
-            bar.setValue(bar.value() - step)  # type: ignore[union-attr]
+            bar.setValue(bar.value() - step)  # type: ignore[union-attr,unused-ignore]
 
     @api.keybindings.register("M", "center", mode=api.modes.IMAGE)
     @api.commands.register(mode=api.modes.IMAGE)
@@ -207,8 +207,8 @@ class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: i
             bar = self.horizontalScrollBar()
         else:
             bar = self.verticalScrollBar()
-        value = 0 if direction in (Direction.Left, Direction.Up) else bar.maximum()  # type: ignore[union-attr]
-        bar.setValue(value)  # type: ignore[union-attr]
+        value = 0 if direction in (Direction.Left, Direction.Up) else bar.maximum()  # type: ignore[union-attr,unused-ignore]
+        bar.setValue(value)  # type: ignore[union-attr,unused-ignore]
 
     @api.keybindings.register("-", "zoom out", mode=api.modes.IMAGE)
     @api.keybindings.register("+", "zoom in", mode=api.modes.IMAGE)
@@ -254,7 +254,7 @@ class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: i
             * **overzoom**: Like **fit** but limit to the overzoom setting.
             * **float**: Set scale to arbitrary decimal value.
         """
-        rect = self.scene().sceneRect()  # type: ignore[union-attr]
+        rect = self.scene().sceneRect()  # type: ignore[union-attr,unused-ignore]
         if level == ImageScale.Overzoom:
             self._scale_to_fit(
                 rect.width(), rect.height(), limit=api.settings.image.overzoom.value
@@ -285,8 +285,8 @@ class ScrollableImage(eventhandler.EventHandlerMixin, QGraphicsView):  # type: i
         """
         if self.scene() is None:
             return
-        xratio = self.viewport().width() / width if width is not None else INF  # type: ignore[union-attr]
-        yratio = self.viewport().height() / height if height is not None else INF  # type: ignore[union-attr]
+        xratio = self.viewport().width() / width if width is not None else INF  # type: ignore[union-attr,unused-ignore]
+        yratio = self.viewport().height() / height if height is not None else INF  # type: ignore[union-attr,unused-ignore]
         ratio = min(xratio, yratio, limit)
         self._scale_to_float(ratio)
 

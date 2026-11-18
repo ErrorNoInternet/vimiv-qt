@@ -72,7 +72,7 @@ class PrintHandler(QObject):
         """Handle a print request of widget for a specific dialog."""
 
         def handler() -> None:
-            widget.print(dialog.printer(), auto_apply_orientation)  # type: ignore[arg-type]
+            widget.print(dialog.printer(), auto_apply_orientation)  # type: ignore[arg-type,unused-ignore]
 
         for signal in signals:
             signal.connect(handler)
