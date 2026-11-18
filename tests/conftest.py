@@ -8,12 +8,18 @@ import urllib.request
 
 import pytest
 
+from vimiv.qt import USE_PYQT5
 from vimiv.qt.core import QCoreApplication, QLibraryInfo
 from vimiv.plugins import metadata_pyexiv2, metadata_piexif
 
-QCoreApplication.setLibraryPaths(
-    [QLibraryInfo.path(QLibraryInfo.LibraryPath.PluginsPath)]
-)
+if USE_PYQT5:
+    QCoreApplication.setLibraryPaths(
+        [QLibraryInfo.location(QLibraryInfo.LibraryLocation.PluginsPath)]
+    )
+else:
+    QCoreApplication.setLibraryPaths(
+        [QLibraryInfo.path(QLibraryInfo.LibraryPath.PluginsPath)]
+    )
 
 CI = "CI" in os.environ
 
