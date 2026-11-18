@@ -12,7 +12,7 @@ jobs:
       matrix:
         include:
           - python: "3.11"
-            toxenv: pyqt6
+            toxenv: pyqt
           - python: "3.11"
             toxenv: pyqt515-cov
           - python: "3.11"
@@ -28,9 +28,9 @@ jobs:
           - python: "3.12"
             toxenv: pyqt66
           - python: "3.12"
-            toxenv: pyqt6-piexif-cov
+            toxenv: pyqt-piexif-cov
           - python: "3.12"
-            toxenv: pyqt6-cov
+            toxenv: pyqt-cov
           - python: "3.12"
             toxenv: lint
           - python: "3.12"
