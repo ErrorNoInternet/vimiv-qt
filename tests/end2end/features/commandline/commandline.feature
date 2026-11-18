@@ -89,9 +89,7 @@ Feature: Use the command line.
 
     Scenario: Fail help command with unknown topic
         When I run help invalid_topic
-        Then the message
-            'help: Unknown topic 'invalid_topic''
-            should be displayed
+        Then the message 'help: Unknown topic 'invalid_topic'' should be displayed
 
     Scenario: Clear complete command history
         When I run command --text=history-clear

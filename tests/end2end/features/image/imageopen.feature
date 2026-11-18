@@ -37,15 +37,11 @@ Feature: Open different images and image formats
         Given I open any image
         When I run open not/a/path
         Then no crash should happen
-        And the message
-            'open: No paths matching 'not/a/path''
-            should be displayed
+        And the message 'open: No paths matching 'not/a/path'' should be displayed
 
     Scenario: Open invalid path
         Given I open any image
         When I create the file 'not_an_image'
         And I run open not_an_image
         Then no crash should happen
-        And the message
-            'open: No valid paths'
-            should be displayed
+        And the message 'open: No valid paths' should be displayed

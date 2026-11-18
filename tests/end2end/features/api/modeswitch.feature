@@ -46,9 +46,7 @@ Feature: Switching between different modes.
         Given I start vimiv
         When I run enter command
         Then the mode should be library
-        And the message
-            'enter: Entering command mode is ambiguous, please use :command or :search'
-            should be displayed
+        And the message 'enter: Entering command mode is ambiguous, please use :command or :search' should be displayed
 
     Scenario: Do not switch mode when toggling inactive library mode
         Given I start vimiv

@@ -22,9 +22,7 @@ Feature: Create and run aliases.
         Given I start vimiv
         When I run alias quit scroll
         Then the alias quit should not exist
-        And the message
-            'alias: Not overriding default command quit'
-            should be displayed
+        And the message 'alias: Not overriding default command quit' should be displayed
 
     Scenario: Alias to an external command
         Given I start vimiv

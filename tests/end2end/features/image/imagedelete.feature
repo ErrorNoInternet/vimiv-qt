@@ -38,9 +38,7 @@ Feature: Deleting an image in the current file list
         Then the filelist should contain 1 images
         And image_02.jpg should not be in the filelist
         And image_03.jpg should not be in the filelist
-        And the message
-            'Deleted 2 images'
-            should be displayed
+        And the message 'Deleted 2 images' should be displayed
 
     Scenario: Delete and undelete multiple images
         Given I open 3 images
@@ -54,26 +52,20 @@ Feature: Deleting an image in the current file list
         Given I open any image
         When I run delete this/is/not/an/image.jpg
         Then no crash should happen
-        And the message
-            'delete: No paths matching 'this/is/not/an/image.jpg''
-            should be displayed
+        And the message 'delete: No paths matching 'this/is/not/an/image.jpg'' should be displayed
 
     Scenario: Undelete basename that does not exist
         Given I open any image
         When I run undelete not_a_basename.jpg
         Then no crash should happen
-        And the message
-            'undelete: File for 'not_a_basename.jpg' does not exist'
-            should be displayed
+        And the message 'undelete: File for 'not_a_basename.jpg' does not exist' should be displayed
 
     Scenario: Do not delete non-image file
         Given I start vimiv
         When I create the file 'not_an_image'
         And I run delete not_an_image
         Then the file not_an_image should exist
-        And the message
-            'delete: No images to delete'
-            should be displayed
+        And the message 'delete: No images to delete' should be displayed
 
     Scenario: Keep limited filelist when deleting images
         Given I open 5 images
@@ -122,7 +114,5 @@ Feature: Deleting an image in the current file list
         Given I open any image
         When I run set read_only true
         And I run delete %
-        Then the message
-            'delete: Disabled due to read-only being active'
-            should be displayed
+        Then the message 'delete: Disabled due to read-only being active' should be displayed
         And the file image.jpg should exist

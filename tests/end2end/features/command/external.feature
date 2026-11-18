@@ -10,9 +10,7 @@ Feature: Running external commands.
 
     Scenario: Fail an external command.
         When I run !not-a-shell-command
-        Then the message
-            'Error running 'not-a-shell-command': command not found or not executable'
-            should be displayed
+        Then the message 'Error running 'not-a-shell-command': command not found or not executable' should be displayed
 
     @flaky
     Scenario: Pipe directory to vimiv.
@@ -22,9 +20,7 @@ Feature: Running external commands.
 
     Scenario: Fail piping to vimiv.
         When I run !ls |
-        Then the message
-            'ls: No paths from pipe'
-            should be displayed
+        Then the message 'ls: No paths from pipe' should be displayed
 
     Scenario: Use spawn with sub-shell
         When I run spawn echo anything > test.txt

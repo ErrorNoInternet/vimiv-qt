@@ -21,22 +21,16 @@ Feature: Miscellaneous commands related to the config
         Given I start vimiv
         When I run set anything.unknown false
         Then no crash should happen
-        And the message
-            'set: unknown setting 'anything.unknown''
-            should be displayed
+        And the message 'set: unknown setting 'anything.unknown'' should be displayed
 
     Scenario: Do not crash on unsupported setting operation
         Given I start vimiv
         When I run set completion.fuzzy +10
         Then no crash should happen
-        And the message
-            'set: 'completion.fuzzy' does not support adding'
-            should be displayed
+        And the message 'set: 'completion.fuzzy' does not support adding' should be displayed
 
     Scenario: Do not crash on wrong setting value
         Given I start vimiv
         When I run set library.width forty
         Then no crash should happen
-        And the message
-            'set: Cannot convert 'forty' to Float'
-            should be displayed
+        And the message 'set: Cannot convert 'forty' to Float' should be displayed

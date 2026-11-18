@@ -21,15 +21,11 @@ Feature: Repeat the last command.
     Scenario: Display error message when running repeat-command before running anything.
         When I run repeat-command
         Then no crash should happen
-        And the message
-            'repeat-command: No command to repeat'
-            should be displayed
+        And the message 'repeat-command: No command to repeat' should be displayed
 
     Scenario: Display error message when running repeat-command in other mode.
         When I run count
         And I enter image mode
         When I run repeat-command
         Then no crash should happen
-        And the message
-            'repeat-command: No command to repeat'
-            should be displayed
+        And the message 'repeat-command: No command to repeat' should be displayed

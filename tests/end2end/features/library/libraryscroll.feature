@@ -12,9 +12,7 @@ Feature: Scrolling the library.
         When I run scroll down
         And I run scroll up
         Then no crash should happen
-        And the message
-            'scroll: Directory is empty'
-            should be displayed
+        And the message 'scroll: Directory is empty' should be displayed
 
     Scenario: Crash when selecting file in empty directory.
         Given I open any directory
@@ -81,9 +79,7 @@ Feature: Scrolling the library.
     Scenario: Display error when neither row nor count is passed to goto
         Given I open a directory with 2 paths
         When I run goto
-        Then the message
-            'goto: Either row or count is required'
-            should be displayed
+        Then the message 'goto: Either row or count is required' should be displayed
 
     Scenario: Keep correct selection when deleting images
         Given I open 5 images
@@ -108,9 +104,7 @@ Feature: Scrolling the library.
         Given I start vimiv
         When I run goto 3
         Then no crash should happen
-        And the message
-            'goto: No path in list'
-            should be displayed
+        And the message 'goto: No path in list' should be displayed
 
     Scenario: Select first row of previously empty directory
         Given I open a directory with 1 paths

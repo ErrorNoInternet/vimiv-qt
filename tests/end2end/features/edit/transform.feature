@@ -51,7 +51,5 @@ Feature: Transform an image.
         Given I open any image of size 300x200
         When I run set read_only true
         And I run rotate
-        Then the message
-            'rotate: Disabled due to read-only being active'
-            should be displayed
+        Then the message 'rotate: Disabled due to read-only being active' should be displayed
         And the orientation should be landscape

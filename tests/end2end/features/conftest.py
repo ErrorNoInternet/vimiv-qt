@@ -317,7 +317,7 @@ def check_status_text(qtbot, statusbar, position, text):
     assert statusbar.isVisible()
 
 
-@bdd.then(bdd.parsers.parse("the message\n'{message}'\nshould be displayed"))
+@bdd.then(bdd.parsers.parse("the message '{message}' should be displayed"))
 def check_message(qtbot, message_widget, message):
     def check():
         assert message == message_widget.text(), "Message expected: '{message}'"

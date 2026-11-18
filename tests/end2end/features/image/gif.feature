@@ -13,6 +13,4 @@ Feature: Open and play animated gifs
 
     Scenario: Do not rotate animated gif
         When I run rotate
-        Then the message
-            'rotate: File format does not support transform'
-            should be displayed
+        Then the message 'rotate: File format does not support transform' should be displayed

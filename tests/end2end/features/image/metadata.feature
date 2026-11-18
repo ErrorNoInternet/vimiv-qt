@@ -37,9 +37,7 @@ Feature: Metadata widget displaying image exif information
         Given I open any image
         When I run 42metadata
         Then the metadata widget should not be visible
-        And the message
-            'metadata: Invalid key set option 42'
-            should be displayed
+        And the message 'metadata: Invalid key set option 42' should be displayed
 
     Scenario: Switch metadata information upon new image
         Given I open 2 images

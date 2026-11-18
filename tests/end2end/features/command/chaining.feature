@@ -18,23 +18,17 @@ Feature: Chain commands together.
     Scenario: Fail first of two chained commands
         When I run something wrong && count
         Then the count should be 0
-        And the message
-            'something: unknown command for mode library'
-            should be displayed
+        And the message 'something: unknown command for mode library' should be displayed
 
     Scenario: Fail second of two chained commands
         When I run count && something wrong
         Then the count should be 1
-        And the message
-            'something: unknown command for mode library'
-            should be displayed
+        And the message 'something: unknown command for mode library' should be displayed
 
     Scenario: Fail second of three chained commands
         When I run count && something wrong && count
         Then the count should be 1
-        And the message
-            'something: unknown command for mode library'
-            should be displayed
+        And the message 'something: unknown command for mode library' should be displayed
 
     Scenario: Run an alias of chained commands
         When I run alias double-count count \&\& count

@@ -4,9 +4,7 @@ Feature: Plugin system with default plugins
         Given I open any directory
         When I enter image mode
         And I run print
-        Then the message
-             'print: No widget to print'
-             should be displayed
+        Then the message 'print: No widget to print' should be displayed
 
     @flaky
     Scenario: Show print dialog

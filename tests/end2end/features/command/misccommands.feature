@@ -5,27 +5,19 @@ Feature: Run miscellaneous commands.
 
     Scenario: Log an info message
         When I run log info my message
-        Then the message
-            'my message'
-            should be displayed
+        Then the message 'my message' should be displayed
 
     Scenario: Log a warning message
         When I run log warning oh oh
-        Then the message
-            'oh oh'
-            should be displayed
+        Then the message 'oh oh' should be displayed
 
     Scenario: Log an error message
         When I run log error this is bad
-        Then the message
-            'this is bad'
-            should be displayed
+        Then the message 'this is bad' should be displayed
 
     Scenario: Fail logging a message
         When I run log basement spiders
-        Then the message
-            'log: Unknown log level 'basement''
-            should be displayed
+        Then the message 'log: Unknown log level 'basement'' should be displayed
 
     Scenario: Sleep for some time
         Given I start a timer

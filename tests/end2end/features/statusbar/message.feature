@@ -5,9 +5,7 @@ Feature: Push messages to the statusbar.
 
     Scenario: Display warning message.
         When I log the warning 'this is a warning'
-        Then the message
-            'this is a warning'
-            should be displayed
+        Then the message 'this is a warning' should be displayed
 
     Scenario: Hide message widget when clearing status
         When I log the warning 'this is a warning'

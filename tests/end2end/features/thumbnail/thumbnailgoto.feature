@@ -24,6 +24,4 @@ Feature: Select a specific thumbnail using the :goto command.
         When I enter thumbnail mode
         And I run goto 4
         Then no crash should happen
-        And the message
-            'goto: No thumbnail in list'
-            should be displayed
+        And the message 'goto: No thumbnail in list' should be displayed

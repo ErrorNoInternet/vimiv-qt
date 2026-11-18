@@ -59,9 +59,7 @@ Feature: Scroll in thumbnail mode.
         When I enter thumbnail mode
         And I run scroll down
         Then no crash should happen
-        And the message
-            'scroll: Thumbnail list is empty'
-            should be displayed
+        And the message 'scroll: Thumbnail list is empty' should be displayed
 
     Scenario: Remove last thumbnail
         Given I open any image

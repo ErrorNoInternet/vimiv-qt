@@ -43,6 +43,4 @@ Feature: Navigating through the displayed images
         When I enter image mode
         When I run goto 3
         Then no crash should happen
-        And the message
-            'goto: No image in list'
-            should be displayed
+        And the message 'goto: No image in list' should be displayed
