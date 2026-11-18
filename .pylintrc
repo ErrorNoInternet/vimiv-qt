@@ -1,6 +1,7 @@
 # vim: ft=dosini fileencoding=utf-8:
 [MASTER]
-extension-pkg-whitelist=PyQt5,
+extension-pkg-allow-list=PyQt5,
+                        PyQt6,
                         vimiv.imutils._c_manipulate
 # Add custom checkers
 init-hook='import sys; sys.path.append("./scripts/pylint_checkers/")'

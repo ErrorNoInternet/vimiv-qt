@@ -9,7 +9,6 @@ from vimiv.qt.gui import QPixmap, QColor
 from vimiv.config import styles
 from vimiv.imutils import edit_handler
 
-
 WIDTH = 300
 HEIGHT = 200
 COLOR = QColor("#888888")

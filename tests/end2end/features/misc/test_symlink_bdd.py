@@ -6,7 +6,6 @@ from vimiv.qt.gui import QPixmap
 
 from vimiv import startup
 
-
 bdd.scenarios("symlink.feature")
 
 

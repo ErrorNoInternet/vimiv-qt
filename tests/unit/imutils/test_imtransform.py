@@ -10,7 +10,6 @@ from vimiv.qt.gui import QPixmap
 
 from vimiv.imutils import current_pixmap, imtransform
 
-
 ACTIONS = (
     imtransform.Transform.rotate_command,
     imtransform.Transform.flip,

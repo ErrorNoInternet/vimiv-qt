@@ -21,7 +21,6 @@ from typing import cast, Tuple
 
 from vimiv.utils import xdg
 
-
 _files_directory = cast(str, None)
 _info_directory = cast(str, None)
 

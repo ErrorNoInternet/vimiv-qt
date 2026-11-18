@@ -12,7 +12,6 @@ from vimiv.qt.core import QProcess, QCoreApplication
 from vimiv import api
 from vimiv.utils import log, flatten, contains_any, escape_glob, qbytearray_to_str
 
-
 _logger = log.module_logger(__name__)
 
 

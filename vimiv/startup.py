@@ -30,7 +30,6 @@ from vimiv.commands import (  # pylint: disable=unused-import
 )
 from vimiv.config import configcommands  # pylint: disable=unused-import
 
-
 _tmpdir = None
 _tmppath = None
 _logger = log.module_logger(__name__)
@@ -150,7 +149,7 @@ def init_ui(args: argparse.Namespace) -> None:
     if args.fullscreen:
         mw.fullscreen()
     # Center on screen and apply size
-    screen_geometry = QApplication.primaryScreen().geometry()
+    screen_geometry = QApplication.primaryScreen().geometry()  # type: ignore[union-attr]
     geometry = (
         args.geometry
         if args.geometry

@@ -7,7 +7,6 @@ import pytest_bdd as bdd
 import vimiv
 from vimiv.utils import log
 
-
 bdd.scenarios("startup.feature")
 
 

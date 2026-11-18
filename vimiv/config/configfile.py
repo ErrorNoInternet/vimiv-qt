@@ -10,7 +10,6 @@ from vimiv.commands import aliases
 from vimiv.config import read_log_exception, parse_config, external_configparser
 from vimiv.utils import log, quotedjoin
 
-
 _logger = log.module_logger(__name__)
 
 

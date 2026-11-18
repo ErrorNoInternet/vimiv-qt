@@ -11,7 +11,6 @@ from vimiv import api, utils
 from vimiv.config import styles
 from vimiv.widgets import PopUp
 
-
 _logger = utils.log.module_logger(__name__)
 
 

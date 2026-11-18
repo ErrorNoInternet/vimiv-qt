@@ -4,7 +4,6 @@ import pytest_bdd as bdd
 
 from vimiv.qt.gui import QResizeEvent
 
-
 bdd.scenarios("imagescroll.feature")
 
 

@@ -14,7 +14,6 @@ from vimiv.qt.svg import QtSvg
 from vimiv import api, utils, imutils
 from vimiv.utils import files, log, asyncrun, imagereader
 
-
 _logger = log.module_logger(__name__)
 
 

@@ -4,7 +4,6 @@ import time
 
 import pytest_bdd as bdd
 
-
 bdd.scenarios("misccommands.feature")
 
 

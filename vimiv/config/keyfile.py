@@ -8,7 +8,6 @@ from typing import Iterable, Tuple
 from vimiv import api, config
 from vimiv.utils import log
 
-
 _logger = log.module_logger(__name__)
 
 DEL_BINDING_COMMAND = "unbind"

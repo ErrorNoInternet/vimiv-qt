@@ -4,7 +4,6 @@ import pytest_bdd as bdd
 
 from vimiv import api, imutils
 
-
 bdd.scenarios("imageorder.feature")
 
 

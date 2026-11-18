@@ -8,7 +8,6 @@ from vimiv.qt.core import QStandardPaths
 
 import vimiv
 
-
 basedir = None
 
 

@@ -72,7 +72,7 @@ class QtReader(BaseReader):
 
     def get_pixmap(self) -> QPixmap:
         """Retrieve the pixmap directly from the image reader."""
-        pixmap = QPixmap.fromImageReader(self._handler)
+        pixmap: QPixmap = QPixmap.fromImageReader(self._handler)
         if pixmap.isNull():
             raise ValueError(
                 f"Error reading image '{self.path}': {self._handler.errorString()}"

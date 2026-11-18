@@ -17,7 +17,6 @@ from vimiv.config import styles
 from vimiv.gui import eventhandler, synchronize
 from vimiv.utils import files, strip_html, clamp, wrap_style_span, log
 
-
 _logger = log.module_logger(__name__)
 
 
@@ -33,7 +32,7 @@ class Position(NamedTuple):
     row: int = 0
 
 
-class Library(
+class Library(  # type: ignore[misc]
     eventhandler.EventHandlerMixin,
     widgets.GetNumVisibleMixin,
     widgets.ScrollWheelCumulativeMixin,
@@ -480,7 +479,7 @@ class LibraryModel(QStandardItemModel):
         except ValueError:
             return
         item = self.item(index, 1)
-        item.setText(api.mark.highlight(item.text(), marked))
+        item.setText(api.mark.highlight(item.text(), marked))  # type: ignore[union-attr]
 
     def remove_all_rows(self):
         """Remove all rows from the model.

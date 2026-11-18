@@ -4,7 +4,6 @@
 
 from vimiv import qt
 
-
 if qt.USE_PYQT5:
     from PyQt5.QtWidgets import *
 if qt.USE_PYQT6:

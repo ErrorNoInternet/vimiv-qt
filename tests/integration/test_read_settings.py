@@ -8,7 +8,6 @@ from vimiv import api
 from vimiv.commands import aliases
 from vimiv.config import configfile
 
-
 ########################################################################################
 #        Configuration dictionaries used to parametrize the configuration file         #
 ########################################################################################

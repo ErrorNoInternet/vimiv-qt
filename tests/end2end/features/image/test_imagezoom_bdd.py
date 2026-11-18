@@ -3,7 +3,6 @@
 import pytest
 import pytest_bdd as bdd
 
-
 bdd.scenarios("imagezoom.feature")
 
 

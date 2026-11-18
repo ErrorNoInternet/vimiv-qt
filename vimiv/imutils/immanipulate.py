@@ -32,7 +32,6 @@ from vimiv.config import styles
 # mypy cannot read the C extension
 from vimiv.imutils import _c_manipulate  # type: ignore
 
-
 _logger = utils.log.module_logger(__name__)
 
 
@@ -297,8 +296,8 @@ class Manipulations(list):
         if qt.USE_PYSIDE6:
             data = bits.tobytes()
         elif qt.USE_PYQT6:
-            bits.setsize(image.sizeInBytes())
-            data = bits.asstring()
+            bits.setsize(image.sizeInBytes())  # type: ignore[union-attr]
+            data = bits.asstring()  # type: ignore[union-attr]
         else:
             bits.setsize(image.byteCount())
             data = bits.asstring()

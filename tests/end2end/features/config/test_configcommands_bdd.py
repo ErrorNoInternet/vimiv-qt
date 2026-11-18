@@ -2,5 +2,4 @@
 
 import pytest_bdd as bdd
 
-
 bdd.scenarios("configcommands.feature")

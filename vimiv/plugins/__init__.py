@@ -67,7 +67,6 @@ from typing import Dict, List
 from vimiv.utils import xdg, log, quotedjoin
 from vimiv import api
 
-
 _app_plugin_directory = os.path.dirname(__file__)
 _user_plugin_directory = xdg.vimiv_data_dir("plugins")
 _plugins: Dict[str, str] = {

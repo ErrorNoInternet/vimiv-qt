@@ -6,7 +6,6 @@ import pytest_bdd as bdd
 
 from vimiv.api._mark import Tag
 
-
 bdd.scenarios("mark.feature")
 
 

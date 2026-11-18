@@ -5,7 +5,6 @@ import pytest_bdd as bdd
 
 from vimiv.imutils import metadata
 
-
 bdd.scenarios("metadata.feature")
 
 

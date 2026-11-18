@@ -10,7 +10,6 @@ import pytest
 from vimiv import api
 from vimiv.commands.history import History
 
-
 MODES = (*api.modes.GLOBALS, api.modes.MANIPULATE)
 MAX_ITEMS = 20
 MODE_HISTORY = {

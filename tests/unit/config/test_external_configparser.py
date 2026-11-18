@@ -9,7 +9,6 @@ import pytest
 
 from vimiv.config import external_configparser
 
-
 ENV_VARIABLE = collections.namedtuple("EnvironmentVariable", ["name", "value"])(
     "COLOR0", "#121212"
 )

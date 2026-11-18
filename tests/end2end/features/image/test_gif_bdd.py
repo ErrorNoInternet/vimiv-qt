@@ -4,7 +4,6 @@ import pytest
 
 import pytest_bdd as bdd
 
-
 bdd.scenarios("gif.feature")
 
 

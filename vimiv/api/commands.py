@@ -83,7 +83,6 @@ from vimiv.utils import (
     type_of_optional,
 )
 
-
 _logger = log.module_logger(__name__)
 
 
@@ -194,7 +193,7 @@ class _CommandArguments(argparse.ArgumentParser):
         for argument in inspect.signature(function).parameters.values():
             self._add_argument(argument, annotations.get(argument.name, None))
 
-    def print_help(self, _file: typing.IO = None) -> typing.NoReturn:
+    def print_help(self, _file: typing.IO = None) -> typing.NoReturn:  # type: ignore[override]
         """Override help message to display in statusbar."""
         raise CommandInfo(self.description)
 
@@ -216,7 +215,9 @@ class _CommandArguments(argparse.ArgumentParser):
         message = message.capitalize()
         raise ArgumentError(message)
 
-    def _add_argument(self, argument: inspect.Parameter, typ: typing.Type) -> None:
+    def _add_argument(
+        self, argument: inspect.Parameter, typ: typing.Optional[typing.Type]
+    ) -> None:
         """Add an argument to argparse using the information given in the function."""
         optional = argument.default != inspect.Parameter.empty
         name = self._argument_name(argument, optional)
@@ -234,7 +235,10 @@ class _CommandArguments(argparse.ArgumentParser):
 
     @classmethod
     def _gen_kwargs(
-        cls, argument: inspect.Parameter, optional: bool, typ: typing.Type
+        cls,
+        argument: inspect.Parameter,
+        optional: bool,
+        typ: typing.Optional[typing.Type],
     ) -> typing.Dict[str, typing.Any]:
         """Create keyword arguments for argparse from inspect parameter.
 

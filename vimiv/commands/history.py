@@ -12,7 +12,6 @@ from vimiv import api
 from vimiv.commands import argtypes
 from vimiv.utils import xdg, log
 
-
 _logger = log.module_logger(__name__)
 
 

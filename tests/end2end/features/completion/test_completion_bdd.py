@@ -8,7 +8,6 @@ import pytest_bdd as bdd
 import vimiv.gui.completionwidget
 from vimiv.utils import trash_manager
 
-
 bdd.scenarios("completion.feature")
 
 

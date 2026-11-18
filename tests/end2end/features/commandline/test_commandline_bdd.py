@@ -9,7 +9,6 @@ import vimiv
 from vimiv import api
 from vimiv.commands import runners
 
-
 bdd.scenarios("commandline.feature")
 
 

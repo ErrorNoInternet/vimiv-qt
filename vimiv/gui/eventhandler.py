@@ -11,7 +11,6 @@ from vimiv.qt.gui import QKeySequence, QKeyEvent, QMouseEvent
 from vimiv import api, utils
 from vimiv.commands import runners
 
-
 SequenceT = Tuple[str, ...]
 
 _logger = utils.log.module_logger(__name__)

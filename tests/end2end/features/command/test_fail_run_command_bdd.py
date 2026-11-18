@@ -5,7 +5,6 @@ import pytest_bdd as bdd
 from vimiv import api
 from vimiv.commands import runners
 
-
 bdd.scenarios("fail_run_command.feature")
 
 

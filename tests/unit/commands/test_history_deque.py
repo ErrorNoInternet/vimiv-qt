@@ -7,7 +7,6 @@ import pytest
 import vimiv.commands.history
 from vimiv.commands.argtypes import HistoryDirection
 
-
 PREFIXES = ":?/"
 CYCLE_HISTORY = [":first", ":second", ":third"]
 SUBSTR_HISTORY = [":first", ":final", ":useless"]

@@ -6,7 +6,6 @@ Module Attributes:
     signals: Signals used as synchronization method.
 """
 
-
 from vimiv.qt.core import Signal, QObject
 
 

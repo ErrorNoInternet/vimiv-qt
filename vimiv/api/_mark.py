@@ -2,7 +2,6 @@
 
 """Mark and tag images."""
 
-
 import enum
 import os
 import shutil
@@ -13,7 +12,6 @@ from vimiv.qt.core import QObject, Signal, QFileSystemWatcher, QDateTime
 from vimiv.api import commands, keybindings, objreg, status, settings, modes
 from vimiv.config import styles
 from vimiv.utils import files, xdg, remove_prefix, wrap_style_span, slot, log
-
 
 _logger = log.module_logger(__name__)
 
@@ -386,7 +384,7 @@ class Tag:
     def _write_header(self) -> None:
         """Write header to a new tag file."""
         self._write_comment("vimiv tag file")
-        now = QDateTime.currentDateTime()
+        now: QDateTime = QDateTime.currentDateTime()
         formatted_time = now.toString("yyyy-MM-dd HH:mm")
         self._write_comment(f"created: {formatted_time}")
 

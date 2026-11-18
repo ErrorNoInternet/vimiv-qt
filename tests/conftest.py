@@ -10,7 +10,6 @@ import pytest
 
 from vimiv.plugins import metadata_pyexiv2, metadata_piexif
 
-
 CI = "CI" in os.environ
 
 HAS_PIEXIF = metadata_piexif.piexif is not None

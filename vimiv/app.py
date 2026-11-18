@@ -10,7 +10,6 @@ from vimiv.qt.widgets import QApplication
 import vimiv
 from vimiv import api, utils
 
-
 _logger = utils.log.module_logger(__name__)
 
 
@@ -66,7 +65,7 @@ class Application(QApplication):
     def get_icon(cls) -> QIcon:  # pragma: no cover  # Async
         """Retrieve window icon of vimiv from theme or project directory."""
         _logger.debug("Trying to retrieve icon from theme")
-        icon = QIcon.fromTheme(vimiv.__name__)
+        icon: QIcon = QIcon.fromTheme(vimiv.__name__)
         if icon.isNull():
             _logger.debug("Trying to retrieve icon from project directory")
             icon = cls._icon_from_project_directory()

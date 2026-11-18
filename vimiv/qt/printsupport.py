@@ -5,10 +5,10 @@
 from vimiv import qt
 from vimiv.qt import gui
 
-
 if qt.USE_PYQT5:
     from PyQt5.QtPrintSupport import *
 
+    # pylint: disable=possibly-used-before-assignment
     Orientation = QPrinter.Orientation
 elif qt.USE_PYQT6:
     from PyQt6.QtPrintSupport import *

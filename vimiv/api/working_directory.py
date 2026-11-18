@@ -62,7 +62,6 @@ from vimiv.qt.core import Signal, QFileSystemWatcher
 from vimiv.api import settings, signals, status
 from vimiv.utils import files, slot, log, throttled
 
-
 _logger = log.module_logger(__name__)
 
 

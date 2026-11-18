@@ -9,7 +9,6 @@ import vimiv.gui.crop_widget
 from vimiv.qt.core import Qt, QPoint
 from vimiv.qt.widgets import QApplication
 
-
 bdd.scenarios("crop.feature")
 
 

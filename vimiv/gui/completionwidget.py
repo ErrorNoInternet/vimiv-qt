@@ -64,9 +64,9 @@ class CompletionView(widgets.FlatTreeView):
         else:
             row = self.row() - 1 if inverse else self.row() + 1
         # No suggestions
-        if not self.model().rowCount():
+        if not self.model().rowCount():  # type: ignore[union-attr]
             return
-        row = row % self.model().rowCount()
+        row = row % self.model().rowCount()  # type: ignore[union-attr]
         self._select_row(row)
         index = self.currentIndex()
         completion = index.data()

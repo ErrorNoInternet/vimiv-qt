@@ -6,6 +6,5 @@ import sys
 
 import vimiv.startup
 
-
 if __name__ == "__main__":
     sys.exit(vimiv.startup.main())

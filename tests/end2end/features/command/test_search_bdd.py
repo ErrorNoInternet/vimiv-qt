@@ -6,7 +6,6 @@ import pytest_bdd as bdd
 from vimiv import api
 from vimiv.commands import search
 
-
 bdd.scenarios("search.feature")
 
 

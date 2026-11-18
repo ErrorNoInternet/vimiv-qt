@@ -4,7 +4,6 @@ import pytest_bdd as bdd
 
 from vimiv.imutils import filelist
 
-
 bdd.scenarios("imagetitle.feature")
 
 

@@ -56,7 +56,6 @@ from vimiv.qt.gui import QStandardItemModel, QStandardItem
 from vimiv.api import modes, settings
 from vimiv.utils import log, escape_chars, unescape_chars
 
-
 _logger = log.module_logger(__name__)
 # Characters that must be escaped for valid commandline usage
 _CHARS_TO_ESCAPE = r"%\\ "

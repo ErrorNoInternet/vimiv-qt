@@ -17,7 +17,6 @@ from vimiv.config import styles
 from vimiv.gui import eventhandler, synchronize
 from vimiv.utils import create_pixmap, thumbnail_manager, log
 
-
 _logger = log.module_logger(__name__)
 
 
@@ -27,7 +26,7 @@ _logger = log.module_logger(__name__)
 # pylint: disable=too-many-public-methods
 
 
-class ThumbnailView(
+class ThumbnailView(  # type: ignore[misc]
     eventhandler.EventHandlerMixin,
     widgets.GetNumVisibleMixin,
     widgets.ScrollToCenterMixin,

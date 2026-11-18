@@ -5,16 +5,15 @@ import pytest_bdd as bdd
 from vimiv import api
 from vimiv.utils import imageheader
 
-
 bdd.scenarios("imageopen.feature")
 
 
 @bdd.when("I open broken images")
 def open_broken_images(tmp_path):
-    _open_file(tmp_path, b"\x89PNG\x0D\x0A\x1A\x0A")  # PNG
-    _open_file(tmp_path, b"\xFF\xD8\xFF\xDB")  # JPG
+    _open_file(tmp_path, b"\x89PNG\x0d\x0a\x1a\x0a")  # PNG
+    _open_file(tmp_path, b"\xff\xd8\xff\xdb")  # JPG
     _open_file(tmp_path, b"GIF89a")  # GIF
-    _open_file(tmp_path, b"II\x2A\x00")  # TIFF
+    _open_file(tmp_path, b"II\x2a\x00")  # TIFF
     _open_file(tmp_path, b"BM")  # BMP
 
 

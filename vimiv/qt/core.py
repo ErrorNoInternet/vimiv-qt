@@ -2,8 +2,9 @@
 
 # pylint: disable=missing-module-docstring,wildcard-import,unused-wildcard-import
 
-from vimiv import qt
+import typing
 
+from vimiv import qt
 
 if qt.USE_PYQT5:
     from PyQt5.QtCore import *
@@ -19,16 +20,16 @@ elif qt.USE_PYSIDE6:
     QT_VERSION_STR = qVersion()
 
 if qt.USE_PYQT:  # Signal aliases
-    # pylint: disable=invalid-name,used-before-assignment
+    # pylint: disable=invalid-name,possibly-used-before-assignment
     BoundSignal = pyqtBoundSignal
-    Signal = pyqtSignal
+    Signal = typing.cast(typing.Callable[..., pyqtSignal], pyqtSignal)
     Slot = pyqtSlot
 
 
 class Align:
     """Namespace for easier access to the Qt alignment flags."""
 
-    # pylint: disable=used-before-assignment
+    # pylint: disable=possibly-used-before-assignment
     Center = Qt.AlignmentFlag.AlignCenter
     Left = Qt.AlignmentFlag.AlignLeft
     Right = Qt.AlignmentFlag.AlignRight

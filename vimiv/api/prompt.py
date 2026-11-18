@@ -8,7 +8,6 @@ from vimiv.qt.core import QObject, Signal
 
 from vimiv.utils import log
 
-
 _logger = log.module_logger(__name__)
 
 

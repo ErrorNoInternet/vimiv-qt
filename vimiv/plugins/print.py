@@ -18,7 +18,6 @@ from vimiv.qt.svg import QtSvg
 from vimiv import api, qt
 from vimiv.utils import slot, log
 
-
 _logger = log.module_logger(__name__)
 
 
@@ -73,7 +72,7 @@ class PrintHandler(QObject):
         """Handle a print request of widget for a specific dialog."""
 
         def handler() -> None:
-            widget.print(dialog.printer(), auto_apply_orientation)
+            widget.print(dialog.printer(), auto_apply_orientation)  # type: ignore[arg-type]
 
         for signal in signals:
             signal.connect(handler)

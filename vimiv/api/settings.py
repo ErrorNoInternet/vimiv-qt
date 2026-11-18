@@ -16,7 +16,6 @@ from vimiv.qt.core import QObject, Signal
 from vimiv.api import prompt
 from vimiv.utils import clamp, log, customtypes, natural_sort
 
-
 _storage: Dict[str, "Setting"] = {}
 _logger = log.module_logger(__name__)
 

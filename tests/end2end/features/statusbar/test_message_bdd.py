@@ -5,7 +5,6 @@ import pytest_bdd as bdd
 from vimiv import api
 from vimiv.utils import log
 
-
 bdd.scenarios("message.feature")
 
 

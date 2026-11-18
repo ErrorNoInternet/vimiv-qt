@@ -5,7 +5,6 @@ import pytest_bdd as bdd
 from vimiv import plugins
 from vimiv.utils import imageheader
 
-
 bdd.scenarios("plugins.feature")
 
 

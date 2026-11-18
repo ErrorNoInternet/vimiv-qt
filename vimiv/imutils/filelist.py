@@ -17,7 +17,6 @@ from vimiv.commands import search, number_for_command
 from vimiv.imutils import slideshow
 from vimiv.utils import files, log
 
-
 _paths: List[str] = []
 _index = 0
 _logger = log.module_logger(__name__)

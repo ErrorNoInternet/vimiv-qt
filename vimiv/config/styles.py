@@ -21,7 +21,6 @@ from vimiv import api
 from vimiv.config import read_log_exception, external_configparser, _style_options
 from vimiv.utils import xdg, log, customtypes
 
-
 NAME_DEFAULT = "default"
 NAME_DEFAULT_DARK = "default-dark"
 DEFAULT_FONT = "10pt Monospace"

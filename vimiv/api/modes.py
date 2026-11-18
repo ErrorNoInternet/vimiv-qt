@@ -23,7 +23,6 @@ they are automatically added for each of these three modes.
 All modes inherit from the common :class:`Mode` base class.
 """
 
-
 from typing import cast, Any, Callable, List, Tuple
 
 from vimiv.qt.core import Signal, QObject
@@ -31,7 +30,6 @@ from vimiv.qt.widgets import QWidget
 
 from vimiv.api import settings
 from vimiv.utils import log
-
 
 _logger = log.module_logger(__name__)
 

@@ -21,7 +21,6 @@ import vimiv
 from vimiv import api
 from vimiv.utils import xdg, imagereader, Pool
 
-
 KEY_URI = "Thumb::URI"
 KEY_MTIME = "Thumb::MTime"
 KEY_SIZE = "Thumb::Size"

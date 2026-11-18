@@ -15,7 +15,6 @@ from vimiv.qt.gui import QGuiApplication, QClipboard
 from vimiv import api
 from vimiv.utils import files, log, imagereader
 
-
 _logger = log.module_logger(__name__)
 
 
@@ -82,7 +81,7 @@ def copy_name(abspath: bool = False, primary: bool = False) -> None:
     mode = QClipboard.Mode.Selection if primary else QClipboard.Mode.Clipboard
     path = api.current_path()
     name = path if abspath else os.path.basename(path)
-    clipboard.setText(name, mode=mode)
+    clipboard.setText(name, mode=mode)  # type: ignore[union-attr]
 
 
 @api.keybindings.register("yi", "copy-image")
@@ -139,7 +138,7 @@ def copy_image(
         _logger.debug(f"Copy image with height {height}")
         pixmap = pixmap.scaledToHeight(height)
 
-    clipboard.setPixmap(pixmap, mode=mode)
+    clipboard.setPixmap(pixmap, mode=mode)  # type: ignore[union-attr]
 
 
 @api.commands.register()
@@ -153,7 +152,7 @@ def paste_name(primary: bool = True) -> None:
     """
     clipboard = QGuiApplication.clipboard()
     mode = QClipboard.Mode.Selection if primary else QClipboard.Mode.Clipboard
-    api.open_paths([clipboard.text(mode=mode)])
+    api.open_paths([clipboard.text(mode=mode)])  # type: ignore[union-attr]
 
 
 @api.commands.register(edit=True)
@@ -287,7 +286,7 @@ def modified() -> str:
         mtime = os.path.getmtime(api.current_path())
     except OSError:
         return "N/A"
-    date_time = QDateTime.fromSecsSinceEpoch(int(mtime))
+    date_time: QDateTime = QDateTime.fromSecsSinceEpoch(int(mtime))
     return date_time.toString("yyyy-MM-dd HH:mm")
 
 

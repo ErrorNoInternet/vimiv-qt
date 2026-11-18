@@ -7,7 +7,6 @@ import typing
 
 from vimiv import checkversion
 
-
 AnyT = typing.TypeVar("AnyT")
 FuncT = typing.TypeVar("FuncT", bound=typing.Callable[..., typing.Any])
 FuncNoneT = typing.TypeVar("FuncNoneT", bound=typing.Callable[..., None])

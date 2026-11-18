@@ -12,7 +12,6 @@ from vimiv.qt.gui import QPixmap, QColor, QPainter
 
 from vimiv.utils.customtypes import AnyT, FuncT, FuncNoneT, NumberT
 
-
 RE_STR_NOT_ESCAPED = r"(?<!\\)"
 RE_STR_ESCAPED = r"\\"
 
@@ -270,7 +269,7 @@ class Pool:
         _threadpoools: List of all created thread pools.
     """
 
-    _threadpools = [QThreadPool.globalInstance()]
+    _threadpools: typing.List[QThreadPool] = [QThreadPool.globalInstance()]
 
     @staticmethod
     def get(*, globalinstance: bool = True) -> QThreadPool:
@@ -436,7 +435,7 @@ def is_optional_type(typ: typing.Any) -> bool:
     return origin is typing.Union and isinstance(None, types)
 
 
-def type_of_optional(typ: typing.Type) -> typing.Any:
+def type_of_optional(typ: typing.Optional[typing.Type]) -> typing.Any:
     """Return T if typ is of type Optional[T]."""
     types = getattr(typ, "__args__", ())
     for elem in types:

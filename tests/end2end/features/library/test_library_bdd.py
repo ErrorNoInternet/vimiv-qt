@@ -2,7 +2,6 @@
 
 import pytest_bdd as bdd
 
-
 bdd.scenarios("library.feature")
 
 

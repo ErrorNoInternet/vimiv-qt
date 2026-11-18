@@ -8,7 +8,6 @@ from typing import List
 
 from vimiv import api, utils
 
-
 _logger = utils.log.module_logger(__name__)
 
 

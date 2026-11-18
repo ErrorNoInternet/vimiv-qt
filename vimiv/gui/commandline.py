@@ -17,7 +17,7 @@ if TYPE_CHECKING:
     from vimiv.commands import history
 
 
-class CommandLine(eventhandler.EventHandlerMixin, QLineEdit):
+class CommandLine(eventhandler.EventHandlerMixin, QLineEdit):  # type: ignore[misc]
     """Commandline widget in the bar.
 
     Class Attributes:

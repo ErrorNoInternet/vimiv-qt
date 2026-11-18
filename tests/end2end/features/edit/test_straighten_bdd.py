@@ -5,7 +5,6 @@ import pytest_bdd as bdd
 
 import vimiv.gui.straightenwidget
 
-
 bdd.scenarios("straighten.feature")
 
 

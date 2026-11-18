@@ -6,7 +6,6 @@ import pytest_bdd as bdd
 
 from vimiv.utils import quotedjoin
 
-
 bdd.scenarios("libraryscroll.feature")
 
 

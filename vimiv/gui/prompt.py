@@ -8,7 +8,6 @@ from vimiv.qt.widgets import QLabel
 from vimiv import api, utils
 from vimiv.config import styles
 
-
 _logger = utils.log.module_logger(__name__)
 
 

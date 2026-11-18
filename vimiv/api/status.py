@@ -37,7 +37,6 @@ from vimiv.qt.core import Signal, QObject
 from vimiv.api import objreg
 from vimiv.utils import log
 
-
 Module = Callable[[], str]
 # Module function is either a function with no arguments or a method which takes self
 ModuleFunc = TypeVar("ModuleFunc", Callable[[], str], Callable[[Any], str])

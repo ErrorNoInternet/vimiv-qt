@@ -12,7 +12,6 @@ from vimiv.qt.gui import QTransform, QPixmap
 from vimiv import api
 from vimiv.utils import log
 
-
 _logger = log.module_logger(__name__)
 
 

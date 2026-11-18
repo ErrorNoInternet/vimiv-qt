@@ -7,7 +7,6 @@ import pytest
 from vimiv import api
 from vimiv.config import keyfile
 
-
 ########################################################################################
 #            Bindings dictionaries used to parametrize the keybinding file             #
 ########################################################################################
