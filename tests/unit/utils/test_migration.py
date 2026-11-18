@@ -53,15 +53,15 @@ def mock_backup(mocker):
 
 def test_run(mock_gtk_version, mock_backup):
     migration.run()
-    migration.backup.assert_called_once()
-    migration.migrate_tags.assert_called_once()
+    migration.backup.assert_called_once()  # pylint: disable=no-member,useless-suppression
+    migration.migrate_tags.assert_called_once()  # pylint: disable=no-member,useless-suppression
     assert migration.WelcomePopUp.gtk_installed
 
 
 def test_do_not_run(mocker, mock_backup):
     mocker.patch.object(migration, "gtk_version_installed", return_value=False)
     migration.run()
-    migration.backup.assert_not_called()
+    migration.backup.assert_not_called()  # pylint: disable=no-member,useless-suppression
     assert not migration.WelcomePopUp.gtk_installed
 
 

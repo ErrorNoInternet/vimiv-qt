@@ -8,7 +8,7 @@ from vimiv.qt import gui
 if qt.USE_PYQT5:
     from PyQt5.QtPrintSupport import *
 
-    # pylint: disable=possibly-used-before-assignment
+    # pylint: disable=possibly-used-before-assignment,useless-suppression
     Orientation = QPrinter.Orientation
 elif qt.USE_PYQT6:
     from PyQt6.QtPrintSupport import *
