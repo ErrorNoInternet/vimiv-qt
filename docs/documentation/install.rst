@@ -132,7 +132,7 @@ You can now launch vimiv by running::
 Dependencies
 ------------
 
-* `Python <http://www.python.org/>`_ 3.8 or newer with development extension
+* `Python <http://www.python.org/>`_ 3.11 or newer with development extension
 * `Qt <http://qt.io/>`_   either 6.2.0 or newer, or 5.15.0 or newer
 
   - QtCore / qtbase

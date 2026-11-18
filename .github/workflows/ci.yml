@@ -11,10 +11,6 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - python: "3.9"
-            toxenv: pyqt515
-          - python: "3.10"
-            toxenv: pyqt515
           - python: "3.11"
             toxenv: pyqt6
           - python: "3.11"

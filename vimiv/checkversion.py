@@ -16,7 +16,7 @@ Module Attributes:
 import sys
 
 
-PYTHON_REQUIRED_VERSION = (3, 8)
+PYTHON_REQUIRED_VERSION = (3, 11)
 PYQT_REQUIRED_VERSION = (5, 13, 2)
 ERR_CODE = 2
 

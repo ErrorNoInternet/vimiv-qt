@@ -34,7 +34,7 @@ def read_from_init(name):
 
 
 setuptools.setup(
-    python_requires=">=3.8",
+    python_requires=">=3.11",
     packages=setuptools.find_packages(),
     ext_modules=[manipulate_module],
     entry_points={"gui_scripts": ["vimiv = vimiv.startup:main"]},
@@ -62,11 +62,10 @@ setuptools.setup(
         "Natural Language :: English",
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python :: 3 :: Only",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
+        "Programming Language :: Python :: 3.14",
         "Topic :: Multimedia",
         "Topic :: Multimedia :: Graphics",
         "Topic :: Multimedia :: Graphics :: Viewers",
