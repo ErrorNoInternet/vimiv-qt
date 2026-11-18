@@ -5,6 +5,7 @@
 import io
 import logging
 import sys
+import tempfile
 
 import pytest
 import pytest_bdd as bdd
@@ -109,14 +110,18 @@ def start_vimiv_stdin(monkeypatch, tmp_path, n_images):
 
 
 @bdd.given("I start vimiv passing a binary image via stdin")
-def start_vimiv_binary_stdin(monkeypatch):
+def start_vimiv_binary_stdin(monkeypatch, tmp_path):
     buf = QBuffer()
     QPixmap(300, 300).save(buf, "jpg")
 
     stdin = io.StringIO()
     stdin.buffer = io.BytesIO(bytes(buf.data()))
 
+    tmpdir = tmp_path / "tmp"
+    tmpdir.mkdir()
+
     monkeypatch.setattr(sys, "stdin", stdin)
+    monkeypatch.setattr(tempfile, "tempdir", str(tmpdir))
 
     start(["-"])
 
