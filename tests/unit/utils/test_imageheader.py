@@ -12,7 +12,7 @@ DETECT_FORMATS = [format for format, _ in imageheader._registry]
 NOT_DETECT_FORMATS = ["pdf", "svgz", "wbmp"]
 
 # QT Formats that alias to others
-QT_ALIAS_FORMATS = ["jpeg", "tif"]
+QT_ALIAS_FORMATS = ["jfif", "jpeg", "tif"]
 
 # Formats that QT can create and that are also detectable
 QT_WRITE_DETECT_FORMATS = [
