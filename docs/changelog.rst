@@ -31,6 +31,9 @@ Added:
   `@mcp292`_ for the idea!
 * The ``--open-images`` flag for the ``:open`` command to emulate the
   ``--open-selected`` behaviour in ``:scroll left/right`` in the library.
+* Support for the ``heif`` file format using the imageformats plugin. To enable it, add
+  ``imageformats = heif`` to the ``[PLUGINS]`` section of your ``vimiv.conf``. Requires
+  `qt-heif-image-plugin <https://github.com/jakar/qt-heif-image-plugin>`_.
 
 Changed:
 ^^^^^^^^
